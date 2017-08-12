@@ -42,4 +42,4 @@ Turns out, there were already numerous attempts on this, as I found out from thi
 6. Multi-scale Approach
 7. Patchwork Approach
 
-On the base level, a feature is matched in consecutive images to _"continue the object"_. Although there are numerous mentioned approaches, all of these only tackle a controlled setup. These, by themselves, does not apply to outdoor and/or moving objects. I have not read specific sources for each of the approaches yet, so I do not have a big idea out of them at the moment.
+On the base level, a feature is matched in consecutive images to _"continue the object"_. Although there are numerous mentioned approaches, all of these only tackle a controlled setup. These, by themselves, does not apply to outdoor and/or moving objects. I have not read specific sources for each of the approaches yet, so I do not have a big idea out of them at the moment. For now, I am interested in combining approaches 1, 4, 5 and 7, if possible.
