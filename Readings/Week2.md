@@ -46,3 +46,7 @@ The study has two categories depending on how fine the details are. Patch consis
 The approach was able to get accurate results, and capture concavities. In addition, it was able to produce seamless 3D object even if there are hidden regions in the available images.
 
 Essentially, small pieces are acquired and stitched together to reconstruct a 3D object.
+
+---
+
+I looked for tutorials in creating 3D objects, but all I could see are those that are created using editing softwares. I have tried to create a [3D model](https://goo.gl/photos/5Lahr8bdKtsYJi519) using Photoshop. For next week, I will try to create a 3D object by programming.
