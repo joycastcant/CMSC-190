@@ -1,7 +1,7 @@
 # Week 3
 #### (August 21, 2017 to August 25, 2017)
 
-This week's activities are focused on my trials in 3D modelling and image processing. I did less paper reading, and looked at bunch of tutorials.
+This week's activities were focused on my trials in 3D modelling and image processing. I did less paper reading, and looked at bunch of tutorials.
 
 ### 3D Reconstruction Using Handheld Camera
 Unlike the other studies that used special cameras (ie. [stereo cameras](http://www.vmresource.com/camera/cameras-general.htm)), the study entitled, [3D Reconstruction from Image Sequence Taken with a Handheld Camera](Documents/3d_Reconstruction_from_Image_Seq_Taken_with_a_Handheld_Camera.pdf) used the type of camera that is not hard to acquire.
@@ -31,7 +31,7 @@ There were not much references in PLY files, so I had to break down the code mys
 
 I'll try to explain this portion. The way I understood it, the first number in every line is the number of corners (or maybe sides) of the shape. Since they are all _four_, it would mean that there are six quadrilaterals. The other next numbers represents the points of each corner assigned to them as shown in this [image](https://goo.gl/photos/mxBWb3AQQGSkLuH88).
 
-Here's the [STL version](../Trials/Models/cube.stl) of the cube from the website.
+Here's the [STL version](../Trials/models/cube.stl) of the cube from the website (I converted it so it can be viewed from Github).
 
 #### Feature Matching
 Finally, I have found a [tutorial](http://docs.opencv.org/trunk/dc/dc3/tutorial_py_matcher.html) for this. Well, the tutorial already gives me the code to do it, but I still have to understand it so I can use it for other purposes.
