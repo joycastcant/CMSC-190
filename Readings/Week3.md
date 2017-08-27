@@ -39,3 +39,6 @@ Finally, I have found a [tutorial](http://docs.opencv.org/trunk/dc/dc3/tutorial_
 Although the code is already there, making it work in my device was a challenge. The brute-force algorithm worked well in my device as shown [here](../Trials/images/books.png). I'm amazed as to how it happened using OpenCV and Python. Even with that, I do not want to settle for brute-force. The tutorial included a SIFT algorithm one, which should work better. After a series of uninstalling and reinstalling several versions of OpenCV, I still could not make SIFT work.
 
 OpenCV already has a function for brute-force matching, so it was really convenient.
+
+---
+UPDATE: As of August 27, 2017, I finally made SIFT work. The result is [here](../Trials/images/books_SIFT.png).
