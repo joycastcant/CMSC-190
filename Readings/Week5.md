@@ -5,7 +5,7 @@ For this week, I tried to create 3D Model from series of images, instead of [ste
 
 I used the [OpenMVG](https://github.com/openMVG/openMVG) library. Here is an [example](https://www.youtube.com/watch?v=q93wH-F58Rs) of what it can do. There is also an available [GUI](https://www.youtube.com/watch?v=Q2_cVN902-M) to use it, but I chose to study what it does using the codes. I used the Structure from Motion technique to estimate the 3D features using 2D images. It is readily available in OpenMVG. In fact, a [sample code](https://github.com/openMVG/openMVG/blob/master/src/software/SfM/tutorial_demo.py.in) using SfM is there to demonstrate the power of the library.
 
-Here are the [images](../Trials/images/openMVG/jake) that I used. There are 22 images in total.
+Here are the [images](../Trials/images/jake) that I used. There are 22 images in total.
 
 ### Process
 I was not able to use the file smoothly at first because the library does not have my phone's camera specifications. I had to add it: Model: ASUS_ZOOLD, Sensor size: 4.7. Once I am done with that, the program started processing the images.
