@@ -15,7 +15,7 @@ pRecons.wait()
   
 I also followed these [steps](http://openmvg.readthedocs.io/en/latest/software/MVS/PMVS/), except that I changed the last line to ```pmvs2 Dataset/outReconstruction/PMVS/ option-xxxx```. The given last line does not work because the sh file tries to access a non-existent directory.
 
-I used [53 images](..Trials/images/jake_burst) in producing the following results:
+I used [53 images](../Trials/images/jake_burst) in producing the following results:
 
 #### Global Reconstruction
 SfM:
