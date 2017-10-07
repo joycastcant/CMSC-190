@@ -1,7 +1,7 @@
 # Week 8
 #### (September 25, 2017 to September 29, 2017)
 
-I did not find images that I can use to challenge the libraries that I am using. Although I found depth maps and camera poses, these do not follow the format in OpenMVG. trying to make them work would require me to have a complete understanding of the structure of the source code. The main functions being called calls other functions in other dorectories, which are buried in the sea of files. With that, I had to have my own images.
+I did not find images that I can use to challenge the libraries that I am using. Although I found depth maps and camera poses, these do not follow the format in OpenMVG. Trying to make them work would require me to have a complete understanding of the structure of the source code. The main functions being called calls other functions in other directories, which are buried in the sea of files. With that, I had to have my own images.
 
 A paper entitled, [Benchmarking Close-range Structure from Motion 3D Reconstruction Software Under Varying Capturing Conditions](Documents/Benchmarking_Close-range_Structure_from_Motion_3D_Reconstruction_Software_Under_Varying_Capturing_Conditions.pdf) helped me in deciding on the characteristics of the objects that I should capture. Since the study's goal is to analyze several software solutions for 3D reconstruction, they chose objects that would be normally hard to reconstruct. Each object should have any of the following: _monochrome colors_, _almost black colors_, _smooth surface_, _patterns_ and _symmetry_.
 
@@ -39,7 +39,7 @@ Dense:
 As we can see, the smooth and the very reflective part of the object is not properly modelled. In the basic version, it was _hollow_, and in the denser version, it was somehow _concave_. A mesh version of this would be nice to see if the smooth part is really reconstructed deviating from the original object, but my device is too weak for it. Waiting for an hour got me nowehere. Of course, a textured version does not exist at the moment as well.
 
 ### Patterns
-The next object's surface has patterns, but I am afraid this might be the best for this.
+The next object's surface has patterns, but I am afraid this might not be the best for this.
 ![Pattern](../Trials/images/pattern/P_20170930_123638_002.jpg)
 
 SfM:
