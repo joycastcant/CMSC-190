@@ -1,0 +1,123 @@
+\documentclass[journal]{./IEEE/IEEEtran}
+\usepackage{cite,graphicx}
+\usepackage[T1]{fontenc}
+
+\newcommand{\SPTITLE}{Reconstructing 3D Models from Images Using OpenMVG and OpenMVS}
+\newcommand{\ADVISEE}{Mary Cris Joy Cantimbuhan}
+\newcommand{\ADVISER}{Maureen Lyndel Lauron}
+
+\newcommand{\BSCS}{Bachelor of Science in Computer Science}
+\newcommand{\ICS}{Institute of Computer Science}
+\newcommand{\UPLB}{University of the Philippines Los Ba\~{n}os}
+% \newcommand{\REMARK}{\thanks{Presented to the Faculty of the \ICS, \UPLB\
+%                              in partial fulfillment of the requirements
+%                              for the Degree of \BSCS}}
+
+\markboth{CMSC 190 Special Problem, \ICS}{}
+\title{\SPTITLE}
+\author{\ADVISEE~and~\ADVISER%
+% \REMARK
+}
+\pubid{\copyright~2006~ICS \UPLB}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%TITLE
+\maketitle
+
+% \begin{abstract}
+% Your abstract.
+% \end{abstract}
+
+\section{Introduction}
+
+\subsection{Background of the Study}
+Back in the 1960s, computer engineers have been creating three-dimensional (3D) models. In our current age, it is used in many things such as animation, games, visualization and 3D printing \cite{Archicgi}.
+
+Using multiple images in reconstructing 3D models has been around for decades. There are many approaches on this, such as \textit{snakes, silhouette exploitation} and \textit{patchwork} \cite{Paris}. All of these are still relevant and some of them are used together with other techniques.
+
+\textit{Structure from Motion (SfM)} is a technique to obtain camera parameters for 3D model reconstruction. It has been used since 1999 \cite{Jebaraa}, until today. OpenMVG uses this as its basis \cite{OpenMVG}.
+
+The study will focus on SfM-MVS (Structure from Motion-Multi-View Stereo). Where SfM by OpenMVG will be used in reconstructing a basic 3D point cloud, and OpenMVS will be used in creating mesh and applying texture \cite{OpenMVS}.
+
+\subsection{Statement of the Problem}
+Statement
+
+\subsection{Objectives}
+Generally, the study aims to develop an application that will accept images from users, and then produce a 3D model from those images. Specifically, this study aims to:
+
+\begin{itemize}
+\item To develop an application for 3D reconstruction from images
+\item To use SfM-MVS workflow in creating 3D models
+\item To assess the application\'s ability to reconstruct 3D models from images within the limitations
+\end{itemize}
+
+\subsection{Significance of the Study}
+why?
+
+\subsection{Scope and Limitations}
+grayscale, smooth, dark, machine(?)
+where, when
+% Your introduction goes here! Some examples of commonly used commands and features are listed below, to help you get started. If you have a question, please use the help menu (``?'') on the top bar to search for help or ask us a question. 
+
+\section{Literature Review}
+intro to this chapter
+
+\subsection{Related Studies}
+chop some stuff
+
+\subsection{Definition of Terms}
+
+\section{Hypotheses}
+null ad alternative hypotheses
+
+%MATERALS AND METHODS
+\section{Materials and Methods}
+intro to this section
+
+\subsection{Materials}
+laptop, camera, programs, subjects
+
+\subsection{Data Collection}
+try uli kung meron sa net. visit places like Paete to take pictures
+
+\subsection{Methods}
+numbered nerdy stuff. add figures, formula, flow chart, algo
+
+\subsection{Data Analysis}
+how can we consider this successful/unsuccessful? holes?
+
+\section{Nature and Form of Results}
+research paper. and an app
+
+%PLAN
+\section{Budget and Project Timeline}
+intro to this section
+
+\subsection{Project Budget}
+table: breakdown
+
+\subsection{Project Timeline}
+gantt chart of activities (per week)
+
+% APPENDICES
+\appendices
+
+\section{Proof of the First Zonklar Equation}
+Appendix one text goes here...
+
+\section{}
+Appendix two (without title) text goes here...
+
+% ACKNOWLEDGMENT
+\section*{Acknowledgment}
+Many thanks to... the quik brown fox jumps over the lazy dog.
+
+% BIBLIOGRAPHY
+\bibliographystyle{./IEEE/IEEEtran}
+\bibliography{./cantimbuhan-cs190-ieee}
+% \nocite{*}
+
+\end{document}
