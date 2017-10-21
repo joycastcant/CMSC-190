@@ -13,6 +13,9 @@ OpenCV provides background reduction functions that I can use for this. Followin
 I tried poking around the threshold, but it does not give me the result I wanted. I'll look into this more. I used the generated masking to model the horse with the same photos. It reduced the modelling time, and the densified model's points was reduced from 1908326 to 1862050.
 
 Final models differ very slightly (maybe because of the poor masking), but notice that noise in the dense points model was removed.
+![1](../Trials/models/horsep/horsep_dense_wtexture00.png)
 
+As sample, I cut down last week's photos to 13, and used masking (this is not the one I'm expecting yet). Believe it or not, modelling took only about five minutes, and it gave the following result:
+![final](../Trials/models/horsepp_out/horse00.png)
 
-As sample, I cut down last week's photos to 13
+Notice that a big portion of the unnecessary background was removed.
