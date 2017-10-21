@@ -18,7 +18,7 @@ Models differ very slightly (maybe because of the poor masking), but notice that
 
 
 As a sample of both things I tried, I cut down last week's photos to 13, and used masking (this is not the one I'm expecting yet). Modelling took only about five minutes, and it gave the following result:
-![final](../Trials/models/horsepp_out/horse00.png)
+![final](../Trials/models/horsepp/horse00.png)
 
 Notice that a big portion of the unnecessary background was removed.
 
