@@ -12,10 +12,15 @@ OpenCV provides background reduction functions that I can use for this. Followin
 
 I tried poking around the threshold, but it does not give me the result I wanted. I'll look into this more. I used the generated masking to model the horse with the same photos. It reduced the modelling time, and the densified model's points was reduced from 1908326 to 1862050.
 
-Final models differ very slightly (maybe because of the poor masking), but notice that noise in the dense points model was removed.
-![1](../Trials/models/horsep/horsep_dense_wtexture00.png)
+Models differ very slightly (maybe because of the poor masking), but notice that the _floating_ portions in the first model was removed.
+![1](../Trials/models/horsep/horsep_dense_mesh00.png)
+![2](../Trials/models/horsep2/horsep2_dense_mesh00.png)
 
-As sample, I cut down last week's photos to 13, and used masking (this is not the one I'm expecting yet). Believe it or not, modelling took only about five minutes, and it gave the following result:
+
+As a sample of both things I tried, I cut down last week's photos to 13, and used masking (this is not the one I'm expecting yet). Modelling took only about five minutes, and it gave the following result:
 ![final](../Trials/models/horsepp_out/horse00.png)
 
 Notice that a big portion of the unnecessary background was removed.
+
+
+For algorithm improvement, maybe something could be done to model the transparent portion of the object as well, instead of it being hollow. I am also looking into making the computation faster internally.
