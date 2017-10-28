@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 \providecommand{\url}[1]{#1}
 \csname url@rmstyle\endcsname
 \providecommand{\newblock}{\relax}
@@ -49,6 +49,40 @@ T.~Jebara, A.~Azarbayejani, and A.~Pentland. (1999, May) 3d structure from 2d
 \BIBentryALTinterwordspacing
 (2015, May) Openmvs. [Online]. Available:
   \url{https://github.com/cdcseacave/openMVS}
+\BIBentrySTDinterwordspacing
+
+\bibitem{art}
+\BIBentryALTinterwordspacing
+The art institute of chicago. [Online]. Available:
+  \url{http://www.artic.edu/visit/museum-guidelines/why-we-dont-touch}
+\BIBentrySTDinterwordspacing
+
+\bibitem{MulayimAtalayYilmaz}
+\BIBentryALTinterwordspacing
+A.~Y. Mulayim, U.~Yilmaz, and V.~Atalay. (2003, February) Silhouette-based 3-d
+  model reconstruction from multiple images. [Online]. Available:
+  \url{https://www.cv.tu-berlin.de/fileadmin/fg140/Silhouette-based\_3D.pdf}
+\BIBentrySTDinterwordspacing
+
+\bibitem{ZengParisQuanSillion}
+\BIBentryALTinterwordspacing
+G.~Zeng, S.~Paris, L.~Quan, and F.~Sillion. (2006, November) Accurate and
+  scalable surface representation and reconstruction from images. [Online].
+  Available: \url{http://ieeexplore.ieee.org/document/4016556/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{LeeYilmaz}
+\BIBentryALTinterwordspacing
+H.~Lee and A.~Yilmaz. (2010, January) 3d reconstruction using photo consistency
+  from uncalibrated multiple views. [Online]. Available:
+  \url{https://pdfs.semanticscholar.org/b681/3af8ba286121f27cbdaa426fc24bb5a81aad.pdf}
+\BIBentrySTDinterwordspacing
+
+\bibitem{MoulonMonasseMarlet}
+\BIBentryALTinterwordspacing
+P.~Moulon, P.~Monasse, and R.~Marlet. (2013, December) Global fusion of
+  relative motions for robust, accurate and scalable structure from motion.
+  [Online]. Available: \url{http://imagine.enpc.fr/~moulonp/publis/iccv2013/}
 \BIBentrySTDinterwordspacing
 
 \end{thebibliography}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2017.10.12)  14 OCT 2017 19:15
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2017.10.12)  28 OCT 2017 23:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -199,25 +199,28 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24> not available
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <24> not available
 (Font)              Font shape `T1/ptm/b/it' tried instead on input line 25.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 52.
+(Font)              <7> on input line 54.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 52.
- (./cantimbuhan-cs190-ieee.bbl
-Underfull \hbox (badness 1521) in paragraph at lines 30--34
-[]\T1/ptm/m/n/8 S. Paris. (2011, De-cem-ber) Meth-ods for 3d re-
- []
-
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 41.
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd
-File: omsptm.fd 
-)
-LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <8> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 41.
+(Font)              <5> on input line 54.
  [1
 
 
 ]
-Underfull \hbox (badness 6978) in paragraph at lines 44--47
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 106.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd
+File: omsptm.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <7> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 106.
+
+Underfull \hbox (badness 4505) in paragraph at lines 106--107
+[]\T1/ptm/m/n/10 Processor: Intel$[]$ Core$[]$ i3-4005U CPU @
+ []
+
+(./cantimbuhan-cs190-ieee.bbl
+Underfull \hbox (badness 5970) in paragraph at lines 44--47
 []\T1/ptm/m/n/8 (2013, Febru-ary) Open-mvg. [On-line]. Avail-able:
  []
 
@@ -226,16 +229,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 50--53
 []\T1/ptm/m/n/8 (2015, May) Open-mvs. [On-line]. Avail-able:
  []
 
-) [2
 
-] (./cantimbuhan-cs190-ieee.aux) ) 
+Underfull \hbox (badness 1762) in paragraph at lines 56--59
+[]\T1/ptm/m/n/8 The art in-sti-tute of chicago. [On-line]. Avail-able:
+ []
+
+
+Overfull \hbox (37.03008pt too wide) in paragraph at lines 76--80
+\T1/ptm/m/n/8 https://pdfs.semanticscholar.org/b681/3af8ba286121f27cbdaa426fc24
+bb5a81aad.pdf 
+ []
+
+) [2] (./cantimbuhan-cs190-ieee.aux) ) 
 Here is how much of TeX's memory you used:
- 1517 strings out of 495029
- 21662 string characters out of 6181522
- 72163 words of memory out of 5000000
- 4767 multiletter control sequences out of 15000+600000
- 96344 words of font info for 96 fonts, out of 8000000 for 9000
+ 1520 strings out of 495029
+ 21724 string characters out of 6181522
+ 74163 words of memory out of 5000000
+ 4771 multiletter control sequences out of 15000+600000
+ 96088 words of font info for 95 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 30i,9n,21p,333b,368s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 26i,9n,19p,704b,298s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on cantimbuhan-cs190-ieee.dvi (2 pages, 5548 bytes).
+Output written on cantimbuhan-cs190-ieee.dvi (2 pages, 11548 bytes).

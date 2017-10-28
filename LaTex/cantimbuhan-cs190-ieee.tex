@@ -2,9 +2,9 @@
 \usepackage{cite,graphicx}
 \usepackage[T1]{fontenc}
 
-\newcommand{\SPTITLE}{Reconstructing 3D Models from Images Using OpenMVG and OpenMVS}
+\newcommand{\SPTITLE}{Reconstructing Sculptures as 3D Models from Images Using OpenMVG and OpenMVS}
 \newcommand{\ADVISEE}{Mary Cris Joy Cantimbuhan}
-\newcommand{\ADVISER}{Maureen Lyndel Lauron}
+\newcommand{\ADVISER}{Asst. Prof. Maureen Lyndel Lauron}
 
 \newcommand{\BSCS}{Bachelor of Science in Computer Science}
 \newcommand{\ICS}{Institute of Computer Science}
@@ -18,7 +18,7 @@
 \author{\ADVISEE~and~\ADVISER%
 % \REMARK
 }
-\pubid{\copyright~2006~ICS \UPLB}
+% \pubid{\copyright~2006~ICS \UPLB}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -36,14 +36,16 @@
 \subsection{Background of the Study}
 Back in the 1960s, computer engineers have been creating three-dimensional (3D) models. In our current age, it is used in many things such as animation, games, visualization and 3D printing \cite{Archicgi}.
 
-Using multiple images in reconstructing 3D models has been around for decades. There are many approaches on this, such as \textit{snakes, silhouette exploitation} and \textit{patchwork} \cite{Paris}. All of these are still relevant and some of them are used together with other techniques.
+Using multiple images in reconstructing 3D models has been around for decades. There are many approaches on this, such as \textit{silhouette exploitation, pathwork} and \textit{photo consistency with homography} \cite{Paris}. All of these are still relevant and some of them are used together with other techniques.
 
 \textit{Structure from Motion (SfM)} is a technique to obtain camera parameters for 3D model reconstruction. It has been used since 1999 \cite{Jebaraa}, until today. OpenMVG uses this as its basis \cite{OpenMVG}.
 
-The study will focus on SfM-MVS (Structure from Motion-Multi-View Stereo). Where SfM by OpenMVG will be used in reconstructing a basic 3D point cloud, and OpenMVS will be used in creating mesh and applying texture \cite{OpenMVS}.
+The study will focus on reconstruction of sculptures using SfM-MVS (Structure from Motion-Multi-View Stereo). Where SfM by OpenMVG will be used in reconstructing a basic 3D point cloud, and OpenMVS will be used in creating mesh and applying texture \cite{OpenMVS}.
 
 \subsection{Statement of the Problem}
-Statement
+Sculpture is a form of art usually in 3D. There are places that are famous for their sculptures, such as Paete, Laguna. Given that, not everyone can personally go there to appreciate the work. In addition, some sculptures are not always available for people to investigate due to their historical value. \cite{art}
+
+With that, people are only left with pictures. But these images by themselves do not always provide the information needed. A virtual version of the sculpture would help to give a better visual information.
 
 \subsection{Objectives}
 Generally, the study aims to develop an application that will accept images from users, and then produce a 3D model from those images. Specifically, this study aims to:
@@ -54,66 +56,87 @@ Generally, the study aims to develop an application that will accept images from
 \item To assess the application\'s ability to reconstruct 3D models from images within the limitations
 \end{itemize}
 
-\subsection{Significance of the Study}
-why?
-
 \subsection{Scope and Limitations}
-grayscale, smooth, dark, machine(?)
-where, when
-% Your introduction goes here! Some examples of commonly used commands and features are listed below, to help you get started. If you have a question, please use the help menu (``?'') on the top bar to search for help or ask us a question. 
+The study\'s goal is to develop an application which accepts series of images, then outputs a 3D model of the object. But not all images are useful for this. The following contains the characteristics of invalid images:
+
+\begin{itemize}
+\item grayscale
+\item transparent
+\item dark
+\item reflective
+\end{itemize}
+
+The focus is to create 3D models of sculptures. Other objects may also be modelled, but the quality is not assured.
 
 \section{Literature Review}
-intro to this chapter
+This section contains literature and studies associated with 3D modelling techniques.
 
 \subsection{Related Studies}
-chop some stuff
+Reconstructing 3D models from images has been around for decades, that many approaches have existed to do this \cite{Paris}.
+
+Mulayim, Atalay and Yilmaz \cite{MulayimAtalayYilmaz} provided a clear explanation of 3D reconstruction from images. Their method is silhouette based, but they also incorporated photo consistency in their study. They have a controlled imaging environment, where they used a round table. They projected the silhouettes and carved off the excess voxels using photo consistency. 
+
+Patchwork is a representation method introduce by Zeng, Paris, Quan and Sillion \cite{ZengParisQuanSillion}. Patches are stitched together in coarse level, and smaller patches are combined in fine level. This method captures concavities, and produces seamless model even with the existence of hidden regions. It also preserves details in large scale modelling.
+
+In 2010, Lee and Yilmaz \cite{LeeYilmaz} focused on homography exploitation and photo consistency for these plays a major role in 3D reconstruction. Their method assures construction of convex and concave areas, without camera calibration and pose estimation. According to their results, their method performs than the silhouette based ones.
+
+OpenMVG's global reconstruction is an open-source implementation of  Moulon, Monasse and Marlet's study in 2013 \cite{MoulonMonasseMarlet}. They used structure from motion (SfM) to estimate camera poses and image orientation. It means that the horizon does not have to be in the same place in the pictures, as long as continuity of the photos is assured. They were able to get precise translation directions and accurate camera positions. They follow the usual SfM pipeline of \textit{image analysis, feature computation, matches detection, and reconstruction}. The main change is in the reconstruction part, where the mentioned adjustments are applied.
+
+Although a 3D point cloud is already present after OpenMVG's SfM pipeline, the result is obviously still lacking in terms of being "whole". It can be improved by using OpenMVS. It reconstructs a dense version of the point cloud from previous SfM pipeline, then creates a mesh. The mesh is refined to acquire specific details that are probably not acquired in previous step. After that, texture is applied using the images used in the SfM pipeline \cite{OpenMVS}.
 
 \subsection{Definition of Terms}
-
-\section{Hypotheses}
-null ad alternative hypotheses
+\begin{itemize}
+    \item 3D - three-dimensional
+    \item IDE - integrated development environment
+    \item MVS - multi-view stereo
+    \item SfM - structure from motion
+    \item voxel -  equivalent to a point in the 3D space
+\end{itemize}
 
 %MATERALS AND METHODS
 \section{Materials and Methods}
-intro to this section
+This section contains the full methodology of the study
 
 \subsection{Materials}
-laptop, camera, programs, subjects
-
-\subsection{Data Collection}
-try uli kung meron sa net. visit places like Paete to take pictures
+Listed below are the materials that will be used for the study:
+\begin{enumerate}
+    \item A laptop with the following specifications for development:
+        \begin{itemize}
+            \item RAM: 3.7 GB
+            \item Processor: Intel\textsuperscript{\textregistered} Core\textsuperscript{TM} i3-4005U CPU @ 1.70GHz x 4
+            \item OS: Ubuntu 14.04.5 LTS
+            \item OS-type: 64-bit
+        \end{itemize}
+        
+    \item A smartphone with the following specifications for taking pictures in testing phase:
+        \begin{itemize}
+            \item RAM: 2GB
+            \item CPU: 1.2GHz
+            \item OS: Android OS v6.0.1 (Marshmallow)
+            \item Display: 5.5"
+        \end{itemize}
+        
+    \item The IDE to be used in creating the mobile application is Google's Android Studio.
+\end{enumerate}
 
 \subsection{Methods}
-numbered nerdy stuff. add figures, formula, flow chart, algo
-
-\subsection{Data Analysis}
-how can we consider this successful/unsuccessful? holes?
-
-\section{Nature and Form of Results}
-research paper. and an app
+\begin{enumerate}
+    \item Image Analysis
+    \item Feature Computation
+    \item Matches Detection
+    \item Global Reconstruction
+    \item Export to OpenMVS format
+    \item Reconstruct Dense 3D Point Cloud
+    \item Create Mesh
+    \item Refine Mesh
+    \item Apply Texture
+\end{enumerate}
+%numbered nerdy stuff. add figures, formula, flow chart, algo
 
 %PLAN
-\section{Budget and Project Timeline}
+\section{Project Timeline}
 intro to this section
-
-\subsection{Project Budget}
-table: breakdown
-
-\subsection{Project Timeline}
 gantt chart of activities (per week)
-
-% APPENDICES
-\appendices
-
-\section{Proof of the First Zonklar Equation}
-Appendix one text goes here...
-
-\section{}
-Appendix two (without title) text goes here...
-
-% ACKNOWLEDGMENT
-\section*{Acknowledgment}
-Many thanks to... the quik brown fox jumps over the lazy dog.
 
 % BIBLIOGRAPHY
 \bibliographystyle{./IEEE/IEEEtran}

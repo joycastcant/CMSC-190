@@ -13,44 +13,44 @@ Database file #1: ./cantimbuhan-cs190-ieee.bib
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 
 Done.
-You've used 5 entries,
+You've used 10 entries,
             3975 wiz_defined-function locations,
-            824 strings with 7697 characters,
-and the built_in function-call counts, 1731 in all, are:
-= -- 118
-> -- 20
+            852 strings with 8681 characters,
+and the built_in function-call counts, 3689 in all, are:
+= -- 255
+> -- 73
 < -- 0
-+ -- 11
-- -- 4
-* -- 74
-:= -- 317
-add.period$ -- 7
-call.type$ -- 5
-change.case$ -- 5
++ -- 36
+- -- 16
+* -- 150
+:= -- 653
+add.period$ -- 16
+call.type$ -- 10
+change.case$ -- 10
 chr.to.int$ -- 0
-cite$ -- 5
-duplicate$ -- 139
-empty$ -- 174
-format.name$ -- 5
-if$ -- 354
+cite$ -- 10
+duplicate$ -- 295
+empty$ -- 361
+format.name$ -- 21
+if$ -- 775
 int.to.chr$ -- 0
-int.to.str$ -- 5
-missing$ -- 34
-newline$ -- 45
-num.names$ -- 2
-pop$ -- 107
+int.to.str$ -- 10
+missing$ -- 76
+newline$ -- 70
+num.names$ -- 6
+pop$ -- 239
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 132
+skip$ -- 279
 stack$ -- 0
 substring$ -- 0
-swap$ -- 86
+swap$ -- 188
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 5
 type$ -- 0
 warning$ -- 0
-while$ -- 2
-width$ -- 6
-write$ -- 66
+while$ -- 6
+width$ -- 12
+write$ -- 114
