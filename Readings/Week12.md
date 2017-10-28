@@ -18,10 +18,10 @@ Using the mask I manually created
 I looked up ways to do the masking. Most of what I have found lean towards object detection, which will require AI. Meaning, this calls for a different project. There is another way, which is background subtraction by OpenCV. This uses the same functions I used last week, except that this time, there is a background model where the program will base on.
 
 Background Model
-![bg](../Trials/images/bg/1.jpg)
+![bg](../Trials/images/bg/2.jpg)
 
 Image
-![img](../Trials/images/bg/2.jpg)
+![img](../Trials/images/bg/1.jpg)
 
 Mask
 ![nmask](../Trials/images/bg/mask.jpg)
