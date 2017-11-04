@@ -1,8 +1,10 @@
 \documentclass[journal]{./IEEE/IEEEtran}
-\usepackage{cite,graphicx}
+\usepackage{cite,graphicx,amsmath}
 \usepackage[T1]{fontenc}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{breakcites}
 
-\newcommand{\SPTITLE}{Reconstructing Sculptures as 3D Models from Images Using OpenMVG and OpenMVS}
+\newcommand{\SPTITLE}{Web Application for Reconstructing Sculptures as 3D Models from Images}
 \newcommand{\ADVISEE}{Mary Cris Joy Cantimbuhan}
 \newcommand{\ADVISER}{Asst. Prof. Maureen Lyndel Lauron}
 
@@ -18,7 +20,7 @@
 \author{\ADVISEE~and~\ADVISER%
 % \REMARK
 }
-% \pubid{\copyright~2006~ICS \UPLB}
+\pubid{\copyright~2017~ICS \UPLB}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -42,22 +44,26 @@ Using multiple images in reconstructing 3D models has been around for decades. T
 
 The study will focus on reconstruction of sculptures using SfM-MVS (Structure from Motion-Multi-View Stereo). Where SfM by OpenMVG will be used in reconstructing a basic 3D point cloud, and OpenMVS will be used in creating mesh and applying texture \cite{OpenMVS}.
 
+A web application will be developed as the presentation of the end project.
+
 \subsection{Statement of the Problem}
 Sculpture is a form of art usually in 3D. There are places that are famous for their sculptures, such as Paete, Laguna. Given that, not everyone can personally go there to appreciate the work. In addition, some sculptures are not always available for people to investigate due to their historical value. \cite{art}
 
 With that, people are only left with pictures. But these images by themselves do not always provide the information needed. A virtual version of the sculpture would help to give a better visual information.
 
+In this day and age, a web application is a good way to enable users to access different services. The user do not have to do heavy computations in their computer, and they do not have to install anything \textit{complicated}.
+
 \subsection{Objectives}
-Generally, the study aims to develop an application that will accept images from users, and then produce a 3D model from those images. Specifically, this study aims to:
+Generally, the study aims to develop a web application that will accept images from users, and then produce a 3D model from those images. Specifically, this study aims:
 
 \begin{itemize}
-\item To develop an application for 3D reconstruction from images
+\item To develop a web application for 3D reconstruction from images
 \item To use SfM-MVS workflow in creating 3D models
-\item To assess the application\'s ability to reconstruct 3D models from images within the limitations
+\item To assess the application\'s ability to reconstruct 3D models from images within the limitations and to cater the user's needs.
 \end{itemize}
 
 \subsection{Scope and Limitations}
-The study\'s goal is to develop an application which accepts series of images, then outputs a 3D model of the object. But not all images are useful for this. The following contains the characteristics of invalid images:
+The study\'s goal is to develop a web application which accepts series of images, then outputs a 3D model of the object. But not all images are useful for this. The following contains the characteristics of invalid images:
 
 \begin{itemize}
 \item grayscale
@@ -68,8 +74,10 @@ The study\'s goal is to develop an application which accepts series of images, t
 
 The focus is to create 3D models of sculptures. Other objects may also be modelled, but the quality is not assured.
 
+Part of the limitations is that the series of photos must be taken in one direction, and must be of good quality. Suggested camera is one with 8MP and sensor size of 4.7mm. Number of megapixels does not automatically equate to image quality, so sensor size must also be considered \cite{Shu}. Many cameras of smartphones nowadays have that specifications, so a professional camera is not required.
+
 \section{Literature Review}
-This section contains literature and studies associated with 3D modelling techniques.
+This section contains literature and studies associated with 3D modelling techniques, together with a useful insight on what framework to use in the application itself.
 
 \subsection{Related Studies}
 Reconstructing 3D models from images has been around for decades, that many approaches have existed to do this \cite{Paris}.
@@ -77,12 +85,21 @@ Reconstructing 3D models from images has been around for decades, that many appr
 Mulayim, Atalay and Yilmaz \cite{MulayimAtalayYilmaz} provided a clear explanation of 3D reconstruction from images. Their method is silhouette based, but they also incorporated photo consistency in their study. They have a controlled imaging environment, where they used a round table. They projected the silhouettes and carved off the excess voxels using photo consistency. 
 
 Patchwork is a representation method introduce by Zeng, Paris, Quan and Sillion \cite{ZengParisQuanSillion}. Patches are stitched together in coarse level, and smaller patches are combined in fine level. This method captures concavities, and produces seamless model even with the existence of hidden regions. It also preserves details in large scale modelling.
+\pubidadjcol
 
-In 2010, Lee and Yilmaz \cite{LeeYilmaz} focused on homography exploitation and photo consistency for these plays a major role in 3D reconstruction. Their method assures construction of convex and concave areas, without camera calibration and pose estimation. According to their results, their method performs than the silhouette based ones.
+In 2010, Lee and Yilmaz \cite{LeeYilmaz} focused on homography exploitation and photo consistency for these plays a major role in 3D reconstruction. Their method assures construction of convex and concave areas, without camera calibration and pose estimation. According to their results, their method performs better than the silhouette based ones.
 
+\subsection{Libraries}
 OpenMVG's global reconstruction is an open-source implementation of  Moulon, Monasse and Marlet's study in 2013 \cite{MoulonMonasseMarlet}. They used structure from motion (SfM) to estimate camera poses and image orientation. It means that the horizon does not have to be in the same place in the pictures, as long as continuity of the photos is assured. They were able to get precise translation directions and accurate camera positions. They follow the usual SfM pipeline of \textit{image analysis, feature computation, matches detection, and reconstruction}. The main change is in the reconstruction part, where the mentioned adjustments are applied.
 
 Although a 3D point cloud is already present after OpenMVG's SfM pipeline, the result is obviously still lacking in terms of being "whole". It can be improved by using OpenMVS. It reconstructs a dense version of the point cloud from previous SfM pipeline, then creates a mesh. The mesh is refined to acquire specific details that are probably not acquired in previous step. After that, texture is applied using the images used in the SfM pipeline \cite{OpenMVS}.
+
+\subsection{Web Application Frameworks}
+There are many 3D modelling websites in the Internet available today. Some of them are SketchUp, Tinkercad, Clara.io and Mixamo. All of these has the ability to show its users 3D models, since their goal is to enable its users create models. With that, a web application for the current problem needs a 3D engine to support it.
+
+BabylonJS is a JavaScript framework for building 3D games \cite{Babylon}. Many demo applications are available in their website. It supports loading OBJ files, which is an option file format in the 3D reconstruction. It is relatively new compared with its famous competitor, ThreeJS, but it has a fast-growing community for newcomers. In addition, BabylonJS supports any browser that is WebGL compatible, such as IE 11+, Firefox 4+, Google Chrome 9+, and Opera 15+.
+
+Together wth BabylonJS, AngularJS and NodeJS can also be used in the web application. Angular can take care of the front-end processes \cite{Angular}. Node.js, on the other hand, will be on the server-side, since it was built on Chrome's V8 JavaScript Engine.
 
 \subsection{Definition of Terms}
 \begin{itemize}
@@ -116,27 +133,86 @@ Listed below are the materials that will be used for the study:
             \item Display: 5.5"
         \end{itemize}
         
-    \item The IDE to be used in creating the mobile application is Google's Android Studio.
+    \item Node.js, Angular, and BabylonJS will be used for the development of the web application.
+    
+    \item OpenMVG and OpenMVS libraries shall be used for the 3D reconstruction.
 \end{enumerate}
 
 \subsection{Methods}
-\begin{enumerate}
-    \item Image Analysis
-    \item Feature Computation
-    \item Matches Detection
-    \item Global Reconstruction
-    \item Export to OpenMVS format
-    \item Reconstruct Dense 3D Point Cloud
-    \item Create Mesh
-    \item Refine Mesh
-    \item Apply Texture
-\end{enumerate}
-%numbered nerdy stuff. add figures, formula, flow chart, algo
+    \subsubsection*{3D Model Reconstruction}
+    \subsubsection{Image Analysis}
+    The width, height and EXIF focal length are extracted from the images themselves. EXIF focal length is the \textit{focal length} field in an image header. Width and height are both in pixels, so that will be acquired from the \textit{resolution} field. Regarding the focal length (it must be in pixels for future computations), it can also be added by the users themselves as an input information, or be estimated by the application, given that the camera sensor size is known. The sensor size information is present in many products, so it is easier to provide than the focal length itself.
+    
+    In the case of focal length not being part of user\'s input, it will be estimated as \cite{Snavely}:
+    
+    \[focal\_length = max(width, height) * \frac{EXIF\_focal\_length}{sensor\_size}\]
+    
+    Principal points on \textit{X} and \textit{Y} axes will also be estimated:
+    
+    \[ppx = \frac{width}{2}\]
+    
+    \[ppy = \frac{height}{2}\]
+    
+    The camera that will be used is a pinhole camera with three parameters, where the $k_n$ are the radial distortion coefficients:
+    
+    \[X_d = (1 + k_1 r^2 + k_2 r^4 + k_3 r^6 ) X\]
+    
+    A view is created for every image, and each view will be checked for valid intrinsic data. The initial intrinsic matrix is shown below:
+    
+    \[K = 
+        \begin{bmatrix}
+            focal\_length & 0 & ppx \\
+            0 & focal\_length & ppy \\
+            0 & 0 & 1
+        \end{bmatrix}
+    \]
+    
+    Using the parameters, the intrinsic data is computed. Intrinsic data are deemed \textit{valid} if the adjustments used for pinhole camera with three parameters fixed the distortions in the image. There are specific matrices to show axis skew, focal length, and principal point offset \cite{Simek}. All images with valid intrinsic data are documented in a JSON file.
+    
+    \subsubsection{Feature Computation}
+    The JSON file will be loaded here. Using that data, an image describer is created using SIFT Image Describer \cite{SIFT}. The optional masking is also done here, if the user wanted to mask the images. A global mask, or a mask for every image will do.
+    
+    Finally, features and descriptors are extracted for every view and are stored as \textit{.desc} and \textit{.feat} files.
+    
+    \subsubsection{Matches Computation}
+    The geometric model to be computed is the fundamental matrix. The intrinsic data with the views are loaded.
+    
+    The image describer used in previous step will be used again here. The descriptors extracted in the previous step will be matched with each other using Approximate Nearest Neighbor L2 matching \cite{AilonChazelle}. Those are the putative matches. The pair list are then matched exhaustively and then using photometric matching \cite{KoloShim}.
+    
+    Next is the geometric filtering of the putative matches using the upper bound of a Contrario Model Estimation threshold \cite{MMM}. Pair with poor connection are removed from the list. The geometric filtered matches are saved, together with the adjacency matrix created from the matches.
+    
+    \subsubsection{Global Reconstruction}
+    This part is heavily based on the study by Moulon et al \cite{MoulonMonasseMarlet}. Again, intrinsic data of the views are loaded. The collected features and matches from the above steps are also read for the configuration of the reconstruction parameters. False relative pairwise rotations are removed. After that global rotation and translations are computed.
+    
+    Using triangulation, link tracks are put in triplets for validation. 3D point cloud and camera poses are ensured after the two-step Bundle Adjustment. At this point, the SfM pipeline is done. But the result is still composed scattered and noisy dots.
+    
+    \subsubsection{Export to OpenMVS Format}
+    OpenMVS has specific parameters to be filled, so there is a separate step for this. All intrinsic data are collected, with the camera (pinhole camera). Undistorted images, poses and structure must be defined so OpenMVS would not have to compute for them again. This step creates a \textit{.mvs} file.
+    
+    \subsubsection{Reconstruct Dense 3D Point Cloud}
+    This is an optional step, but doing this would produce more detailed, and accurate model. The parameters added in the \textit{.mvs} file are validated first, before processing. Images with no valid neighbors are removed, best views are selected as reference image. 
+    
+    All 3D points visible in the reference image are extracted. The depth and normal maps are estimated using triangulation of sparse 3D point cloud and interpolating normal and depth of all points in the images. Small segments are them removed, and small gaps are filled as much as possible. Lastly, all valid depth amps are combined in one 3D point cloud.
+    
+    \subsubsection{Create Mesh}
+    Using Delaunay tetrahedralization \cite{Del} and graph-cut method \cite{JP}, mesh is reconstructed with the consideration of point cloud input (either the one from OpenMVG, or from the dense 3D point cloud reconstruction). The Delaunay triangulation of the point cloud input is reconstructed one-by-one in the point insertion. 
+    
+    Each edge is weighted, and the graph-cut algorithm splits the tetrahedrons to acquire surfaces. An optional mesh refinement can be done to smooth out the surface, but this will take more time. Given that the unrefined and refined meshes does not have much difference, the unrefined mesh can serve the purpose of 3D virtual representation of an object.
+    
+    \subsubsection{Apply Texture}
+    Each surface in a view is rendered. Every face is assigned the best view of them, together with a mean color. Texture patches are assigned in every view, plus the faces which will use the patch.
+    
+    An array of faces viewed by each image is extracted. The projection area is computed in each face. Outliers, or views where the projection is very different from the other views are sized down, or are removed. Border pixels of texture patches are also removed after an amount of dilation. After that seam leveling and merging of texture patches with overlapping rectangles take place. The patches are arranged to fit the smallest possible texture image. Some texture patches' sizes are increased in cases where a few increase will fit the current position.
+    
+    Final texture patch coordinates are then computed, and the final model will have a separate \textit{.png} file containing all the texture patches. 
+    
+    \subsubsection*{The Web Application}
+    Node.js will be used in the back-end. Angular and BabylonJS shall work together in the front-end.
 
 %PLAN
-\section{Project Timeline}
-intro to this section
-gantt chart of activities (per week)
+% \section{Project Timeline}
+% intro to this section
+% gantt chart of activities (per week)
 
 % BIBLIOGRAPHY
 \bibliographystyle{./IEEE/IEEEtran}
