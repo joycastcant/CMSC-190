@@ -16,9 +16,6 @@ Carillon Tower2
 Marya Fountain
 ![vmed2](../Trials/models/vmed2/vmed200.png)
 
-Carillon Tower1
-![carr1](../Trials/models/carr1/carr100.png)
-
 Trail
 ![trail](../Trials/models/trail/trail00.png)
 
